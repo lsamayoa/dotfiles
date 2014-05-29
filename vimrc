@@ -15,14 +15,21 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'godlygeek/tabular'
 
-" You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+" Languages
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
 call neobundle#end()
 
@@ -35,8 +42,6 @@ NeoBundleCheck
 
 syntax on
 set number
-" Use the Molokai theme (originally created for TextMate by Wimer Hazenberg)
-colorscheme monokai
 " Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc
 set secure
@@ -102,3 +107,15 @@ set autoindent
 set smartindent
 set smarttab
 set foldenable
+set splitbelow
+set splitright
+
+set backupdir=~/.vim/swp
+set directory=~/.vim/swp
+
+nmap nt :NERDTreeToggle<CR>
+
+
+colorscheme Tomorrow-Night-Eighties 
+
+let NERDTreeShowHidden=1
